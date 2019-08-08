@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "sns_slack_policy" {
-  name        = "${var.environment}-SNS-SLACK-LAMBDA-POLICY"
+  name        = "${upper(var.environment)}-SNS-SLACK-LAMBDA-POLICY"
   path        = "/"
   description = "SNS notification to slack."
 
