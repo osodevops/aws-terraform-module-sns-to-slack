@@ -3,5 +3,5 @@ resource "aws_iam_policy" "sns_slack_policy" {
   path        = "/"
   description = "SNS notification to slack."
 
-  policy = "${data.aws_iam_policy_document.lambda_config_policy.json}"
+  policy = data.aws_iam_policy_document.lambda_config_policy.json
 }
